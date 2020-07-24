@@ -1,0 +1,1378 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Class Diagram - co.edu.sena.web.rest</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_top">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_bottom">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_left">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_right">
+	</div>
+	<canvas width="100" style="position:absolute; z-index:2; visibility:hidden" id="spotlight_c" height="100">
+	</canvas>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesTop">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesRight">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+			</tr>
+			<tr>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute;z-index:4;visibility:hidden" id="linkPopupMenuLayer">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="linkPopupMenuTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="referenceIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="subdiagramIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="transitorIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="documentationIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Documentation.png" style="border:none" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		Diagrama de Clases	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="referencedBys">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="referencedBysTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="vplink">
+		<table border="1" cellpadding="0" cellspacing="0" bordercolor="#A9BFD3">
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" width="100%" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+								<select onchange="vpLinkToggleName()" id="vplink-linkType">
+	<option value="Project Link">Project Link</option>
+	<option value="Page URL">Page URL</option>
+</select>
+							</td>
+							<td style="font-size: 12px;" align="right">
+								<input onclick="javascript: vpLinkToggleName()" id="vplink-checkbox" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p>
+<a href="Package_RO_nvs6GAqAADie_.html" class="PageParentTitle">co : Package</a><span class="PageParentTitle">&nbsp;.&nbsp;</span><a href="Package_7O_nvs6GAqAADie_.html" class="PageParentTitle">edu : Package</a><span class="PageParentTitle">&nbsp;.&nbsp;</span><a href="Package_XO_nvs6GAqAADifA.html" class="PageParentTitle">sena : Package</a><span class="PageParentTitle">&nbsp;.&nbsp;</span><a href="Package_RNCfvs6GAqAADkaF.html" class="PageParentTitle">web : Package</a><span class="PageParentTitle">&nbsp;.&nbsp;</span><a href="Package_5NCfvs6GAqAADkaG.html" class="PageParentTitle">rest : Package</a>	</p>
+	<p class="PageTitle">
+		<span id="PageTitleText">
+			Class Diagram - co.edu.sena.web.rest		</span>
+<a onclick="javascript: showVpLink('Diagrama de Clases.vpp://diagram/.6Mfvs6GAqAADkZ4', 'co.edu.sena.web.rest\nDiagrama de Clases.vpp://diagram/.6Mfvs6GAqAADkZ4', 'co.edu.sena.web.rest', this); return false;" style="padding-left: 16px; font-size: 12px" href="#"><img src="../images/icons/link.png" border="0"> link</a>	</p>
+	<div style="position: relative; padding-bottom: 20px;">
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: absolute; top: 0; left: 0; z-index: 20;" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();">
+			<tr>
+				<td>
+<span class="TableContent">Jump to:</span>					<select id="SelectShape" class="TableContent" onChange="scrollWin('diagram', this.value);hideLinkPopup();showSpotLight('diagram', this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|2.0|1145.0|529.0|237.0|Class_i_yfvs6GAqAADkaI.html|Class_i_yfvs6GAqAADkaI.html|DjKfvs6GAqAADk9n" id="optionDjKfvs6GAqAADk9n">AccountResource : Class</option>
+<option value="shape|690.0|1243.0|236.0|40.0|Class_H_yfvs6GAqAADkbU.html|Class_H_yfvs6GAqAADkbU.html|jjKfvs6GAqAADk9p" id="optionjjKfvs6GAqAADk9p">AccountResourceException : Class</option>
+<option value="shape|471.0|2168.0|568.0|102.0|Class_3_yfvs6GAqAADkba.html|Class_3_yfvs6GAqAADkba.html|TjKfvs6GAqAADk9r" id="optionTjKfvs6GAqAADk9r">AuditResource : Class</option>
+<option value="shape|2.0|1694.0|599.0|192.0|Class_kAKfvs6GAqAADkb9.html|Class_kAKfvs6GAqAADkb9.html|TjKfvs6GAqAADk9t" id="optionTjKfvs6GAqAADk9t">CausalTerminationResource : Class</option>
+<option value="shape|2.0|2390.0|137.0|40.0|Class_RAKfvs6GAqAADkdD.html|Class_RAKfvs6GAqAADkdD.html|LjKfvs6GAqAADk9v" id="optionLjKfvs6GAqAADk9v">ClientForwardController : Class</option>
+<option value="shape|449.0|1931.0|396.0|192.0|Class_ZAKfvs6GAqAADkdK.html|Class_ZAKfvs6GAqAADkdK.html|bjKfvs6GAqAADk9x" id="optionbjKfvs6GAqAADk9x">ContractResource : Class</option>
+<option value="shape|2.0|521.0|809.0|282.0|Class__AKfvs6GAqAADkeS.html|Class__AKfvs6GAqAADkeS.html|HjKfvs6GAqAADk9z" id="optionHjKfvs6GAqAADk9z">CustomerResource : Class</option>
+<option value="shape|1218.0|1694.0|478.0|192.0|Class_lgKfvs6GAqAADkgE.html|Class_lgKfvs6GAqAADkgE.html|njKfvs6GAqAADk91" id="optionnjKfvs6GAqAADk91">DependencyResource : Class</option>
+<option value="shape|22.0|84.0|509.0|147.0|Class_QQKfvs6GAqAADkhL.html|Class_QQKfvs6GAqAADkhL.html|XjKfvs6GAqAADk93" id="optionXjKfvs6GAqAADk93">BadRequestAlertException : Class</option>
+<option value="shape|286.0|399.0|160.0|57.0|Class_CQKfvs6GAqAADkhv.html|Class_CQKfvs6GAqAADkhv.html|3jKfvs6GAqAADk95" id="option3jKfvs6GAqAADk95">EmailAlreadyUsedException : Class</option>
+<option value="shape|2276.0|129.0|148.0|57.0|Class_KQKfvs6GAqAADkh1.html|Class_KQKfvs6GAqAADkh1.html|3jKfvs6GAqAADk97" id="option3jKfvs6GAqAADk97">EmailNotFoundException : Class</option>
+<option value="shape|551.0|62.0|518.0|192.0|Class_GQKfvs6GAqAADkh7.html|Class_GQKfvs6GAqAADkh7.html|PjKfvs6GAqAADk99" id="optionPjKfvs6GAqAADk99">ErrorConstants : Class</option>
+<option value="shape|1571.0|47.0|685.0|222.0|Class_QwKfvs6GAqAADkiT.html|Class_QwKfvs6GAqAADkiT.html|vjKfvs6GAqAADk9_" id="optionvjKfvs6GAqAADk9_">ExceptionTranslator : Class</option>
+<option value="shape|1089.0|84.0|292.0|147.0|Class__wKfvs6GAqAADkjc.html|Class__wKfvs6GAqAADkjc.html|fjKfvs6GAqAADk.B" id="optionfjKfvs6GAqAADk.B">FieldErrorVM : Class</option>
+<option value="shape|1401.0|129.0|150.0|57.0|Class_VwKfvs6GAqAADkj0.html|Class_VwKfvs6GAqAADkj0.html|_jKfvs6GAqAADk.D" id="option_jKfvs6GAqAADk.D">InvalidPasswordException : Class</option>
+<option value="shape|106.0|399.0|160.0|57.0|Class_dwKfvs6GAqAADkj6.html|Class_dwKfvs6GAqAADkj6.html|_jKfvs6GAqAADk.F" id="option_jKfvs6GAqAADk.F">LoginAlreadyUsedException : Class</option>
+<option value="shape|971.0|1145.0|631.0|237.0|Class_TwKfvs6GAqAADkkA.html|Class_TwKfvs6GAqAADkkA.html|ATKfvs6GAqAADk.H" id="optionATKfvs6GAqAADk.H">InstructorContractResource : Class</option>
+<option value="shape|2.0|1427.0|432.0|222.0|Class_PIKfvs6GAqAADklb.html|Class_PIKfvs6GAqAADklb.html|QTKfvs6GAqAADk.J" id="optionQTKfvs6GAqAADk.J">InstructorResource : Class</option>
+<option value="shape|478.0|1427.0|543.0|207.0|Class_oYKfvs6GAqAADkm1.html|Class_oYKfvs6GAqAADkm1.html|QTKfvs6GAqAADk.L" id="optionQTKfvs6GAqAADk.L">PeaceAndSaveResource : Class</option>
+<option value="shape|2.0|1931.0|402.0|192.0|Class_eYKfvs6GAqAADkn9.html|Class_eYKfvs6GAqAADkn9.html|wTKfvs6GAqAADk.N" id="optionwTKfvs6GAqAADk.N">RegionalResource : Class</option>
+<option value="shape|1067.0|1427.0|454.0|207.0|Class_7YKfvs6GAqAADkpD.html|Class_7YKfvs6GAqAADkpD.html|wTKfvs6GAqAADk.P" id="optionwTKfvs6GAqAADk.P">RequestResource : Class</option>
+<option value="shape|855.0|521.0|717.0|267.0|Class_74Kfvs6GAqAADkqa.html|Class_74Kfvs6GAqAADkqa.html|ITKfvs6GAqAADk.R" id="optionITKfvs6GAqAADk.R">ResponsibleDependencyResource : Class</option>
+<option value="shape|1454.0|1931.0|493.0|177.0|Class_BEKfvs6GAqAADkry.html|Class_BEKfvs6GAqAADkry.html|ITKfvs6GAqAADk.T" id="optionITKfvs6GAqAADk.T">ResponsibleResource : Class</option>
+<option value="shape|890.0|1931.0|520.0|177.0|Class_nEKfvs6GAqAADks1.html|Class_nEKfvs6GAqAADks1.html|ITKfvs6GAqAADk.V" id="optionITKfvs6GAqAADk.V">TrainingCenterResource : Class</option>
+<option value="shape|645.0|1694.0|527.0|192.0|Class_8kKfvs6GAqAADkt0.html|Class_8kKfvs6GAqAADkt0.html|oTKfvs6GAqAADk.X" id="optionoTKfvs6GAqAADk.X">TypeDocumentResource : Class</option>
+<option value="shape|1084.0|2168.0|572.0|87.0|Class_cUKfvs6GAqAADku6.html|Class_cUKfvs6GAqAADku6.html|4TKfvs6GAqAADk.Z" id="option4TKfvs6GAqAADk.Z">UserJWTController : Class</option>
+<option value="shape|1816.0|2168.0|182.0|87.0|Class_GUKfvs6GAqAADkvR.html|Class_GUKfvs6GAqAADkvR.html|iTKfvs6GAqAADk.b" id="optioniTKfvs6GAqAADk.b">JWTToken : Class</option>
+<option value="shape|2.0|848.0|512.0|252.0|Class__UKfvs6GAqAADkvh.html|Class__UKfvs6GAqAADkvh.html|STKfvs6GAqAADk.d" id="optionSTKfvs6GAqAADk.d">UserResource : Class</option>
+<option value="shape|2.0|2168.0|424.0|177.0|Class_HUKfvs6GAqAADkwo.html|Class_HUKfvs6GAqAADkwo.html|STKfvs6GAqAADk.f" id="optionSTKfvs6GAqAADk.f">ValidationResource : Class</option>
+<option value="shape|579.0|923.0|241.0|117.0|Class_xMKfvs6GAqAADkxo.html|Class_xMKfvs6GAqAADkxo.html|STKfvs6GAqAADk.h" id="optionSTKfvs6GAqAADk.h">KeyAndPasswordVM : Class</option>
+<option value="shape|1070.0|893.0|249.0|177.0|Class_IsKfvs6GAqAADkx6.html|Class_IsKfvs6GAqAADkx6.html|yTKfvs6GAqAADk.j" id="optionyTKfvs6GAqAADk.j">LoginVM : Class</option>
+<option value="shape|840.0|915.0|210.0|132.0|Class_esKfvs6GAqAADkyf.html|Class_esKfvs6GAqAADkyf.html|yTKfvs6GAqAADk.l" id="optionyTKfvs6GAqAADk.l">ManagedUserVM : Class</option>
+<option value="shape|2.0|2.0|2442.0|474.0|Package_gQKfvs6GAqAADkhK.html|Package_gQKfvs6GAqAADkhK.html|yTKfvs6GAqAADk.n" id="optionyTKfvs6GAqAADk.n">errors : Package</option>
+<option value="shape|559.0|848.0|780.0|242.0|Package_xMKfvs6GAqAADkxn.html|Package_xMKfvs6GAqAADkxn.html|KTKfvs6GAqAADk.p" id="optionKTKfvs6GAqAADk.p">vm : Package</option>
+</select>				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: relative; top: 24;">
+			<tr>
+				<td>
+					<img id="diagram" src="../images/coedusenawebrest.png" usemap="#diagram_map" class="Image" width="2448" height="2434"/>
+					<map name="diagram_map">
+<area imageId="diagram" coords="284.0, 231.0, 284.0, 408.0, 286.0, 408.0, 286.0, 399.0, 298.0, 399.0, 298.0, 231.0" coords2="284.0, 231.0, 284.0, 408.0, 286.0, 408.0, 286.0, 399.0, 298.0, 399.0, 298.0, 231.0" shape="poly" alt=":Generalization" id="areadiagram_map_qTKfvs6GAqAADk.r_default" href="Generalization_T8Kfvs6GAqAADk2A.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="254.0, 231.0, 254.0, 399.0, 266.0, 399.0, 266.0, 408.0, 268.0, 408.0, 268.0, 231.0" coords2="254.0, 231.0, 254.0, 399.0, 266.0, 399.0, 266.0, 408.0, 268.0, 408.0, 268.0, 231.0" shape="poly" alt=":Generalization" id="areadiagram_map_6TKfvs6GAqAADk.t_default" href="Generalization_iCKfvs6GAqAADk2c.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="22, 84, 531, 231" coords2="22, 84, 531, 231" shape="rect" alt="BadRequestAlertException:Class" id="areadiagram_map_XjKfvs6GAqAADk93_default" href="Class_QQKfvs6GAqAADkhL.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="286, 399, 446, 456" coords2="286, 399, 446, 456" shape="rect" alt="EmailAlreadyUsedException:Class" id="areadiagram_map_3jKfvs6GAqAADk95_default" href="Class_CQKfvs6GAqAADkhv.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2276, 129, 2424, 186" coords2="2276, 129, 2424, 186" shape="rect" alt="EmailNotFoundException:Class" id="areadiagram_map_3jKfvs6GAqAADk97_default" href="Class_KQKfvs6GAqAADkh1.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="551, 62, 1069, 254" coords2="551, 62, 1069, 254" shape="rect" alt="ErrorConstants:Class" id="areadiagram_map_PjKfvs6GAqAADk99_default" href="Class_GQKfvs6GAqAADkh7.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      Controller advice to translate the server side exceptions to 
+      client-friendly json structures.
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      The error response follows RFC7807 - Problem Details for HTTP APIs 
+      (https://tools.ietf.org/html/rfc7807).
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1571, 47, 2256, 269" coords2="1571, 47, 2256, 269" shape="rect" alt="ExceptionTranslator:Class" id="areadiagram_map_vjKfvs6GAqAADk9__default" href="Class_QwKfvs6GAqAADkiT.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" coords="1089, 84, 1381, 231" coords2="1089, 84, 1381, 231" shape="rect" alt="FieldErrorVM:Class" id="areadiagram_map_fjKfvs6GAqAADk.B_default" href="Class__wKfvs6GAqAADkjc.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1401, 129, 1551, 186" coords2="1401, 129, 1551, 186" shape="rect" alt="InvalidPasswordException:Class" id="areadiagram_map__jKfvs6GAqAADk.D_default" href="Class_VwKfvs6GAqAADkj0.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="106, 399, 266, 456" coords2="106, 399, 266, 456" shape="rect" alt="LoginAlreadyUsedException:Class" id="areadiagram_map__jKfvs6GAqAADk.F_default" href="Class_dwKfvs6GAqAADkj6.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      View Model object for storing the user's key and password.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="579, 923, 820, 1040" coords2="579, 923, 820, 1040" shape="rect" alt="KeyAndPasswordVM:Class" id="areadiagram_map_STKfvs6GAqAADk.h_default" href="Class_xMKfvs6GAqAADkxo.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      View Model object for storing a user's credentials.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1070, 893, 1319, 1070" coords2="1070, 893, 1319, 1070" shape="rect" alt="LoginVM:Class" id="areadiagram_map_yTKfvs6GAqAADk.j_default" href="Class_IsKfvs6GAqAADkx6.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      View Model extending the UserDTO, which is meant to be used in the user 
+      management UI.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="840, 915, 1050, 1047" coords2="840, 915, 1050, 1047" shape="rect" alt="ManagedUserVM:Class" id="areadiagram_map_yTKfvs6GAqAADk.l_default" href="Class_esKfvs6GAqAADkyf.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing the current user's account.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 1145, 531, 1382" coords2="2, 1145, 531, 1382" shape="rect" alt="AccountResource:Class" id="areadiagram_map_DjKfvs6GAqAADk9n_default" href="Class_i_yfvs6GAqAADkaI.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" coords="690, 1243, 926, 1283" coords2="690, 1243, 926, 1283" shape="rect" alt="AccountResourceException:Class" id="areadiagram_map_jjKfvs6GAqAADk9p_default" href="Class_H_yfvs6GAqAADkbU.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for getting the {@link AuditEvent}s.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="471, 2168, 1039, 2270" coords2="471, 2168, 1039, 2270" shape="rect" alt="AuditResource:Class" id="areadiagram_map_TjKfvs6GAqAADk9r_default" href="Class_3_yfvs6GAqAADkba.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link 
+      co.edu.sena.domain.CausalTermination}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 1694, 601, 1886" coords2="2, 1694, 601, 1886" shape="rect" alt="CausalTerminationResource:Class" id="areadiagram_map_TjKfvs6GAqAADk9t_default" href="Class_kAKfvs6GAqAADkb9.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" coords="2, 2390, 139, 2430" coords2="2, 2390, 139, 2430" shape="rect" alt="ClientForwardController:Class" id="areadiagram_map_LjKfvs6GAqAADk9v_default" href="Class_RAKfvs6GAqAADkdD.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Contract}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="449, 1931, 845, 2123" coords2="449, 1931, 845, 2123" shape="rect" alt="ContractResource:Class" id="areadiagram_map_bjKfvs6GAqAADk9x_default" href="Class_ZAKfvs6GAqAADkdK.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Customer}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 521, 811, 803" coords2="2, 521, 811, 803" shape="rect" alt="CustomerResource:Class" id="areadiagram_map_HjKfvs6GAqAADk9z_default" href="Class__AKfvs6GAqAADkeS.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Dependency}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1218, 1694, 1696, 1886" coords2="1218, 1694, 1696, 1886" shape="rect" alt="DependencyResource:Class" id="areadiagram_map_njKfvs6GAqAADk91_default" href="Class_lgKfvs6GAqAADkgE.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link 
+      co.edu.sena.domain.InstructorContract}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="971, 1145, 1602, 1382" coords2="971, 1145, 1602, 1382" shape="rect" alt="InstructorContractResource:Class" id="areadiagram_map_ATKfvs6GAqAADk.H_default" href="Class_TwKfvs6GAqAADkkA.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Instructor}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 1427, 434, 1649" coords2="2, 1427, 434, 1649" shape="rect" alt="InstructorResource:Class" id="areadiagram_map_QTKfvs6GAqAADk.J_default" href="Class_PIKfvs6GAqAADklb.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.PeaceAndSave}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="478, 1427, 1021, 1634" coords2="478, 1427, 1021, 1634" shape="rect" alt="PeaceAndSaveResource:Class" id="areadiagram_map_QTKfvs6GAqAADk.L_default" href="Class_oYKfvs6GAqAADkm1.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Regional}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 1931, 404, 2123" coords2="2, 1931, 404, 2123" shape="rect" alt="RegionalResource:Class" id="areadiagram_map_wTKfvs6GAqAADk.N_default" href="Class_eYKfvs6GAqAADkn9.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Request}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1067, 1427, 1521, 1634" coords2="1067, 1427, 1521, 1634" shape="rect" alt="RequestResource:Class" id="areadiagram_map_wTKfvs6GAqAADk.P_default" href="Class_7YKfvs6GAqAADkpD.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link 
+      co.edu.sena.domain.ResponsibleDependency}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="855, 521, 1572, 788" coords2="855, 521, 1572, 788" shape="rect" alt="ResponsibleDependencyResource:Class" id="areadiagram_map_ITKfvs6GAqAADk.R_default" href="Class_74Kfvs6GAqAADkqa.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Responsible}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1454, 1931, 1947, 2108" coords2="1454, 1931, 1947, 2108" shape="rect" alt="ResponsibleResource:Class" id="areadiagram_map_ITKfvs6GAqAADk.T_default" href="Class_BEKfvs6GAqAADkry.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.TrainingCenter}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="890, 1931, 1410, 2108" coords2="890, 1931, 1410, 2108" shape="rect" alt="TrainingCenterResource:Class" id="areadiagram_map_ITKfvs6GAqAADk.V_default" href="Class_nEKfvs6GAqAADks1.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.TypeDocument}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="645, 1694, 1172, 1886" coords2="645, 1694, 1172, 1886" shape="rect" alt="TypeDocumentResource:Class" id="areadiagram_map_oTKfvs6GAqAADk.X_default" href="Class_8kKfvs6GAqAADkt0.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      Controller to authenticate users.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1084, 2168, 1656, 2255" coords2="1084, 2168, 1656, 2255" shape="rect" alt="UserJWTController:Class" id="areadiagram_map_4TKfvs6GAqAADk.Z_default" href="Class_cUKfvs6GAqAADku6.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      Object to return as body in JWT Authentication.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="1816, 2168, 1998, 2255" coords2="1816, 2168, 1998, 2255" shape="rect" alt="JWTToken:Class" id="areadiagram_map_iTKfvs6GAqAADk.b_default" href="Class_GUKfvs6GAqAADkvR.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing users.
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;p&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      This class accesses the {@link User} entity, and needs to fetch its 
+      collection of authorities.
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;p&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      For a normal use-case, it would be better to have an eager relationship 
+      between User and Authority,
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      and send everything to the client side: there would be no View Model and 
+      DTO, a lot less code, and an outer-join
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      which would be good for performance.
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;p&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      We use a View Model and a DTO for 3 reasons:
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;ul&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;li&amp;​gt;We want to keep a lazy association between the user and the 
+      authorities, because people will
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      quite often do relationships with the user, and we don't want them to 
+      get the authorities all
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      the time for nothing (for performance reasons). This is the #1 goal: we 
+      should not impact our users'
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      application because of this use-case.&amp;​lt;/li&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;li&amp;​gt; Not having an outer join causes n+1 requests to the database. This 
+      is not a real issue as
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      we have by default a second-level cache. This means on the first HTTP 
+      call we do the n+1 requests,
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      but then all authorities come from the cache, so in fact it's much 
+      better than doing an outer join
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      (which will get lots of data from the database, for each HTTP call).&amp;​lt;/li&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;li&amp;​gt; As this manages users, for security reasons, we'd rather have a DTO 
+      layer.&amp;​lt;/li&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;/ul&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      &amp;​lt;p&amp;​gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      Another option would be to have a specific JPA entity graph to handle 
+      this case.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 848, 514, 1100" coords2="2, 848, 514, 1100" shape="rect" alt="UserResource:Class" id="areadiagram_map_STKfvs6GAqAADk.d_default" href="Class__UKfvs6GAqAADkvh.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" docContent="&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;
+      REST controller for managing {@link co.edu.sena.domain.Validation}.
+    &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+" coords="2, 2168, 426, 2345" coords2="2, 2168, 426, 2345" shape="rect" alt="ValidationResource:Class" id="areadiagram_map_STKfvs6GAqAADk.f_default" href="Class_HUKfvs6GAqAADkwo.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),showTooltip(this)" onmousedown="clearSpotLight();" onmouseout="hideTooltip()"/>
+<area imageId="diagram" coords="2, 2, 2444, 476" coords2="2, 2, 2444, 476" shape="rect" alt="errors:Package" id="areadiagram_map_yTKfvs6GAqAADk.n_default" href="Package_gQKfvs6GAqAADkhK.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="559, 848, 1339, 1090" coords2="559, 848, 1339, 1090" shape="rect" alt="vm:Package" id="areadiagram_map_KTKfvs6GAqAADk.p_default" href="Package_xMKfvs6GAqAADkxn.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+</map>
+				</td>
+			</tr>
+		</table>
+		<p>
+		</p>
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Description</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_i_yfvs6GAqAADkaI.html" class="ItemLink">AccountResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing the current user's account.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_H_yfvs6GAqAADkbU.html" class="ItemLink">AccountResourceException : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_3_yfvs6GAqAADkba.html" class="ItemLink">AuditResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for getting the {@link AuditEvent}s.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_kAKfvs6GAqAADkb9.html" class="ItemLink">CausalTerminationResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link 
+      co.edu.sena.domain.CausalTermination}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_RAKfvs6GAqAADkdD.html" class="ItemLink">ClientForwardController : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_ZAKfvs6GAqAADkdK.html" class="ItemLink">ContractResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Contract}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class__AKfvs6GAqAADkeS.html" class="ItemLink">CustomerResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Customer}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_lgKfvs6GAqAADkgE.html" class="ItemLink">DependencyResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Dependency}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_QQKfvs6GAqAADkhL.html" class="ItemLink">BadRequestAlertException : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_CQKfvs6GAqAADkhv.html" class="ItemLink">EmailAlreadyUsedException : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_KQKfvs6GAqAADkh1.html" class="ItemLink">EmailNotFoundException : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_GQKfvs6GAqAADkh7.html" class="ItemLink">ErrorConstants : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_QwKfvs6GAqAADkiT.html" class="ItemLink">ExceptionTranslator : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      Controller advice to translate the server side exceptions to 
+      client-friendly json structures.
+    </p>
+    <p style="margin-top:0;">
+      The error response follows RFC7807 - Problem Details for HTTP APIs 
+      (https://tools.ietf.org/html/rfc7807).
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class__wKfvs6GAqAADkjc.html" class="ItemLink">FieldErrorVM : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_VwKfvs6GAqAADkj0.html" class="ItemLink">InvalidPasswordException : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_dwKfvs6GAqAADkj6.html" class="ItemLink">LoginAlreadyUsedException : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_TwKfvs6GAqAADkkA.html" class="ItemLink">InstructorContractResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link 
+      co.edu.sena.domain.InstructorContract}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_PIKfvs6GAqAADklb.html" class="ItemLink">InstructorResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Instructor}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_oYKfvs6GAqAADkm1.html" class="ItemLink">PeaceAndSaveResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.PeaceAndSave}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_eYKfvs6GAqAADkn9.html" class="ItemLink">RegionalResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Regional}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_7YKfvs6GAqAADkpD.html" class="ItemLink">RequestResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Request}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_74Kfvs6GAqAADkqa.html" class="ItemLink">ResponsibleDependencyResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link 
+      co.edu.sena.domain.ResponsibleDependency}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_BEKfvs6GAqAADkry.html" class="ItemLink">ResponsibleResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Responsible}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_nEKfvs6GAqAADks1.html" class="ItemLink">TrainingCenterResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.TrainingCenter}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_8kKfvs6GAqAADkt0.html" class="ItemLink">TypeDocumentResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.TypeDocument}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_cUKfvs6GAqAADku6.html" class="ItemLink">UserJWTController : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      Controller to authenticate users.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_GUKfvs6GAqAADkvR.html" class="ItemLink">JWTToken : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      Object to return as body in JWT Authentication.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class__UKfvs6GAqAADkvh.html" class="ItemLink">UserResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing users.
+    </p>
+    <p style="margin-top:0;">
+      &lt;p&gt;
+    </p>
+    <p style="margin-top:0;">
+      This class accesses the {@link User} entity, and needs to fetch its 
+      collection of authorities.
+    </p>
+    <p style="margin-top:0;">
+      &lt;p&gt;
+    </p>
+    <p style="margin-top:0;">
+      For a normal use-case, it would be better to have an eager relationship 
+      between User and Authority,
+    </p>
+    <p style="margin-top:0;">
+      and send everything to the client side: there would be no View Model and 
+      DTO, a lot less code, and an outer-join
+    </p>
+    <p style="margin-top:0;">
+      which would be good for performance.
+    </p>
+    <p style="margin-top:0;">
+      &lt;p&gt;
+    </p>
+    <p style="margin-top:0;">
+      We use a View Model and a DTO for 3 reasons:
+    </p>
+    <p style="margin-top:0;">
+      &lt;ul&gt;
+    </p>
+    <p style="margin-top:0;">
+      &lt;li&gt;We want to keep a lazy association between the user and the 
+      authorities, because people will
+    </p>
+    <p style="margin-top:0;">
+      quite often do relationships with the user, and we don't want them to 
+      get the authorities all
+    </p>
+    <p style="margin-top:0;">
+      the time for nothing (for performance reasons). This is the #1 goal: we 
+      should not impact our users'
+    </p>
+    <p style="margin-top:0;">
+      application because of this use-case.&lt;/li&gt;
+    </p>
+    <p style="margin-top:0;">
+      &lt;li&gt; Not having an outer join causes n+1 requests to the database. This 
+      is not a real issue as
+    </p>
+    <p style="margin-top:0;">
+      we have by default a second-level cache. This means on the first HTTP 
+      call we do the n+1 requests,
+    </p>
+    <p style="margin-top:0;">
+      but then all authorities come from the cache, so in fact it's much 
+      better than doing an outer join
+    </p>
+    <p style="margin-top:0;">
+      (which will get lots of data from the database, for each HTTP call).&lt;/li&gt;
+    </p>
+    <p style="margin-top:0;">
+      &lt;li&gt; As this manages users, for security reasons, we'd rather have a DTO 
+      layer.&lt;/li&gt;
+    </p>
+    <p style="margin-top:0;">
+      &lt;/ul&gt;
+    </p>
+    <p style="margin-top:0;">
+      &lt;p&gt;
+    </p>
+    <p style="margin-top:0;">
+      Another option would be to have a specific JPA entity graph to handle 
+      this case.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_HUKfvs6GAqAADkwo.html" class="ItemLink">ValidationResource : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      REST controller for managing {@link co.edu.sena.domain.Validation}.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_xMKfvs6GAqAADkxo.html" class="ItemLink">KeyAndPasswordVM : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      View Model object for storing the user's key and password.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_IsKfvs6GAqAADkx6.html" class="ItemLink">LoginVM : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      View Model object for storing a user's credentials.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_esKfvs6GAqAADkyf.html" class="ItemLink">ManagedUserVM : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top:0;">
+      View Model extending the UserDTO, which is meant to be used in the user 
+      management UI.
+    </p>
+  </body>
+</html>
+</span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_gQKfvs6GAqAADkhK.html" class="ItemLink">errors : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_xMKfvs6GAqAADkxn.html" class="ItemLink">vm : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		Diagrama de Clases	</div>
+</body>
+</html>
